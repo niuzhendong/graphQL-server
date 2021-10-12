@@ -35,7 +35,7 @@ abstract class BaseCommonServiceImpl<I extends IBaseCommonRepository<D>, D exten
     }
 
     public DTO create(DTO dto) throws BaseException {
-        dto = super.create(dto);
+        dto = IBaseCommonService.super.create(dto);
         D t = (D)this.dtoToDomain(dto, true);
         t = (D)((IBaseCommonRepository)this.iBaseRepository).saveAndFlush(t);
         if (dto instanceof BaseJoinDTO) {
@@ -47,7 +47,7 @@ abstract class BaseCommonServiceImpl<I extends IBaseCommonRepository<D>, D exten
     }
 
     public Boolean batchCreate(List<DTO> dtoList) throws BaseException {
-        super.batchCreate(dtoList);
+        IBaseCommonService.super.batchCreate(dtoList);
         List<D> ts = new ArrayList();
         dtoList.forEach((dto) -> {
             D t = (D)this.dtoToDomain(dto, true);
@@ -64,7 +64,7 @@ abstract class BaseCommonServiceImpl<I extends IBaseCommonRepository<D>, D exten
     }
 
     public DTO update(DTO dto) throws BaseException {
-        dto = super.update(dto);
+        dto = IBaseCommonService.super.update(dto);
         dto = this.commonUpdate(dto);
         return this.afterUpdate(dto);
     }

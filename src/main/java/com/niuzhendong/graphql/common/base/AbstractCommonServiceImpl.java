@@ -16,6 +16,7 @@ import org.springframework.context.MessageSource;
 import java.util.List;
 
 public abstract class AbstractCommonServiceImpl<I extends ICommonRepository<D>, D extends CommonDomain, DTO extends CommonDTO> implements ICommonService<DTO, D> {
+
     protected Logger log = LoggerFactory.getLogger(this.getClass());
     protected Class<D> domainClass = (Class<D>) CommonReflectionUtil.getSuperClassGenericType(this.getClass(), 1);
     protected Class<I> plusMapperClass = (Class<I>) CommonReflectionUtil.getSuperClassGenericType(this.getClass(), 0);
@@ -26,9 +27,6 @@ public abstract class AbstractCommonServiceImpl<I extends ICommonRepository<D>, 
     protected I iBaseRepository;
     @Autowired
     protected MessageSource messageSource;
-
-    public AbstractCommonServiceImpl() {
-    }
 
     public final Class<D> getDomainClass() {
         return this.domainClass;

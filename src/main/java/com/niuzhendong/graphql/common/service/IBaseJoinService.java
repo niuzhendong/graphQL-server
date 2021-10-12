@@ -12,7 +12,7 @@ import java.util.Map;
 
 public interface IBaseJoinService<DTO extends BaseJoinDTO, D extends CommonDomain> extends IBaseCommonService<DTO, D> {
     default DTO beforeCreate(DTO dto) {
-        super.beforeCreate(dto);
+        IBaseCommonService.super.beforeCreate(dto);
         D domain = this.dtoToDomain(dto, true);
         dto.setId(JoinIDUtil.generateJoinId(domain, this.getDomainIdMethodGetMap()));
         return dto;
