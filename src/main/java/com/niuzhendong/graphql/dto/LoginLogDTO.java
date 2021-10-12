@@ -1,5 +1,6 @@
 package com.niuzhendong.graphql.dto;
 
+import com.niuzhendong.graphql.common.dto.BaseDTO;
 import io.swagger.annotations.ApiModel;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +14,7 @@ import lombok.NoArgsConstructor;
 @ApiModel(value = "RoomDTO对象")
 @Data
 @NoArgsConstructor
-public class LoginLogDTO{
+public class LoginLogDTO extends BaseDTO {
 
     private String username;
     private Integer result;

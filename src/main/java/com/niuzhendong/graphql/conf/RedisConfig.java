@@ -1,14 +1,14 @@
 package com.niuzhendong.graphql.conf;
 
-import cn.com.taiji.common.cache.BaseCacheKeyGenerator;
-import cn.com.taiji.common.util.CommonCacheUtil;
-import cn.com.taiji.common.util.CommonCaffeineUtil;
-import cn.com.taiji.common.util.CommonRedisUtil;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.niuzhendong.graphql.common.cache.BaseCacheKeyGenerator;
+import com.niuzhendong.graphql.common.utils.CommonCacheUtil;
+import com.niuzhendong.graphql.common.utils.CommonCaffeineUtil;
+import com.niuzhendong.graphql.common.utils.CommonRedisUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

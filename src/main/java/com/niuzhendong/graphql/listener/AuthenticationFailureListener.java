@@ -1,7 +1,7 @@
 package com.niuzhendong.graphql.listener;
 
-import com.sample.tdf.dto.LoginLogDTO;
-import com.sample.tdf.service.ILoginLogService;
+import com.niuzhendong.graphql.dto.LoginLogDTO;
+import com.niuzhendong.graphql.service.ILoginLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.security.authentication.event.AbstractAuthenticationFailureEvent;

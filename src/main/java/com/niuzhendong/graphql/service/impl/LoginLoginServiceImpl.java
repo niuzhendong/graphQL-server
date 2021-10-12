@@ -1,9 +1,10 @@
 package com.niuzhendong.graphql.service.impl;
 
-import cn.com.taiji.common.base.BaseServiceImpl;
-import com.sample.tdf.domain.LoginLog;
-import com.sample.tdf.domain.LoginLogRepository;
-import com.sample.tdf.dto.LoginLogDTO;
+
+import com.niuzhendong.graphql.common.base.BaseServiceImpl;
+import com.niuzhendong.graphql.domain.LoginLog;
+import com.niuzhendong.graphql.domain.LoginLogRepository;
+import com.niuzhendong.graphql.dto.LoginLogDTO;
 import com.niuzhendong.graphql.service.ILoginLogService;
 import org.springframework.stereotype.Service;
 

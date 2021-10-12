@@ -1,6 +1,6 @@
 package com.niuzhendong.graphql.exception;
 
-import cn.com.taiji.common.exception.BaseException;
+import com.niuzhendong.graphql.common.Exception.BaseException;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

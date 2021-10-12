@@ -1,29 +1,16 @@
 package com.niuzhendong.graphql.conf;
 
-import cn.com.taiji.common.dto.BaseCommonDTO;
-import cn.com.taiji.common.dto.CommonUserDTO;
-import cn.com.taiji.common.service.CommonSecurityService;
-import cn.com.taiji.security.BasePasswordEncoder;
-import cn.com.taiji.security.BaseSecurityUser;
-import cn.com.taiji.security.BaseUserDetailServiceImpl;
-import cn.com.taiji.security.FormLoginFailureHandler;
-import cn.com.taiji.security.authorization.BaseDynamicAuthorization;
-import cn.com.taiji.security.captcha.BaseCaptchaConfigurer;
-import cn.com.taiji.security.complexity.BasePasswordComplexity;
-import cn.com.taiji.security.jwt.BaseJwtAccessDeniedHandler;
-import cn.com.taiji.security.jwt.BaseJwtAuthenticationEntryPoint;
-import cn.com.taiji.security.jwt.BaseJwtSuccessHandler;
-import cn.com.taiji.security.jwt.configurer.BaseJwtTokenAuthenticationConfigurer;
-import cn.com.taiji.security.qrcode.BaseQrCodeConfigurer;
-import cn.com.taiji.security.service.BaseSecurityServiceImpl;
-import cn.com.taiji.security.sms.SmsSecurityConfigurer;
-import cn.com.taiji.security.sms.SmsThirdSendService;
-import cn.com.taiji.security.sms.SmsUserDetailsService;
-import cn.com.taiji.sys.dto.RoleDTO;
-import cn.com.taiji.sys.dto.RoleUserJoinDTO;
-import cn.com.taiji.sys.dto.UserInfoDTO;
-import cn.com.taiji.sys.service.*;
 import cn.hutool.core.collection.CollectionUtil;
+import com.niuzhendong.graphql.common.base.BaseDynamicAuthorization;
+import com.niuzhendong.graphql.common.captcha.BaseCaptchaConfigurer;
+import com.niuzhendong.graphql.common.complexity.BasePasswordComplexity;
+import com.niuzhendong.graphql.common.configurer.BaseQrCodeConfigurer;
+import com.niuzhendong.graphql.common.configurer.SmsSecurityConfigurer;
+import com.niuzhendong.graphql.common.dto.*;
+import com.niuzhendong.graphql.common.security.*;
+import com.niuzhendong.graphql.common.service.*;
+import com.niuzhendong.graphql.common.service.impl.BaseSecurityServiceImpl;
+import com.niuzhendong.graphql.common.service.impl.BaseUserDetailServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -91,7 +78,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Value("${base.security.login.qrcode.expiration:120}")
     private Long qrCodeExpiration;
 
-    //获取当前用户的工具类
     //获取当前用户的工具类
     @Bean
     public CommonSecurityService baseSecurityService() {

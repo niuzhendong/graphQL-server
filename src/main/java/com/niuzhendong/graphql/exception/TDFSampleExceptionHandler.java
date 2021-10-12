@@ -1,7 +1,8 @@
 package com.niuzhendong.graphql.exception;
 
-import cn.com.taiji.common.dto.ResultDTO;
-import cn.com.taiji.common.exception.BaseExceptionHandler;
+
+import com.niuzhendong.graphql.common.Exception.BaseExceptionHandler;
+import com.niuzhendong.graphql.common.dto.ResultDTO;
 import org.hibernate.exception.ConstraintViolationException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

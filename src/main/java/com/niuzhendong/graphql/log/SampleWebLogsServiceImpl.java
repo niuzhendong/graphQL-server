@@ -1,8 +1,8 @@
 package com.niuzhendong.graphql.log;
 
-import cn.com.taiji.log.domain.WebLogs;
-import cn.com.taiji.log.dto.WebLogsDTO;
-import cn.com.taiji.log.service.impl.WebLogsServiceImpl;
+import com.niuzhendong.graphql.common.domain.WebLogs;
+import com.niuzhendong.graphql.common.dto.WebLogsDTO;
+import com.niuzhendong.graphql.common.service.impl.WebLogsServiceImpl;
 import org.aspectj.lang.JoinPoint;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;

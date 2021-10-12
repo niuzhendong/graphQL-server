@@ -1,8 +1,8 @@
 package com.niuzhendong.graphql.service;
 
-import cn.com.taiji.common.domain.CommonDomain;
-import cn.com.taiji.common.service.IBaseService;
-import com.sample.tdf.dto.LoginLogDTO;
+import com.niuzhendong.graphql.common.domain.CommonDomain;
+import com.niuzhendong.graphql.common.service.IBaseService;
+import com.niuzhendong.graphql.dto.LoginLogDTO;
 
 /**
  * @author chenzhe

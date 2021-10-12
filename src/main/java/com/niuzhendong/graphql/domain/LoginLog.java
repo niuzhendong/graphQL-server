@@ -1,6 +1,6 @@
 package com.niuzhendong.graphql.domain;
 
-import cn.com.taiji.common.base.BaseDomain;
+import com.niuzhendong.graphql.common.domain.BaseDomain;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.Where;

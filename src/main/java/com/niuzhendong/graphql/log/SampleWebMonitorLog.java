@@ -1,8 +1,8 @@
 package com.niuzhendong.graphql.log;
 
-import cn.com.taiji.common.service.CommonSecurityService;
 import cn.com.taiji.log.service.IWebLogsService;
 import cn.hutool.core.map.MapUtil;
+import com.niuzhendong.graphql.common.service.CommonSecurityService;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Aspect;

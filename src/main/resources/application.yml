@@ -29,7 +29,7 @@ spring:  #多环境切换
 logging:
   level:
     org.springframework.web: info
-    cn.com.taiji: info
+    com.niuzhendong.graphql: info
 
 base:
   sys:
